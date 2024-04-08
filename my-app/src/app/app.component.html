@@ -1,3 +1,19 @@
-<app-home></app-home>
-<app-order></app-order>
-<app-footer></app-footer>
+<header class="d-flex flex-wrap align-items-center py-3 mb-4 border-bottom justify-content-center">
+  <ul class="nav mb-2 justify-content-center mb-md-0">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/84/60/da/8460da29-1ee8-71ed-2481-a196df1abcb5/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg" width="40" height="40">
+    <li class="mx-2"><a routerLink="/home" class="btn btn-outline-danger">Commande en cours</a></li>
+    <li class="mx-2"><a routerLink="/order" class="btn btn-outline-danger">Commander</a></li>
+  </ul>
+</header>
+
+
+<router-outlet></router-outlet>
+
+<footer class=" text-center text-lg-start fixed-bottom pt-5">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgb(255, 0, 0); color: white;">
+    © 2024 Copyright:
+    <a class="" href="https://www.croix-rouge.fr" style="color: white;">MINUTIS</a>
+  </div>
+  <!-- Copyright -->
+</footer>
