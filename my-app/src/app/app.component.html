@@ -152,12 +152,11 @@
     margin-right: 25px;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr 0.9fr 1.1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 20px 20px;
     grid-template-areas:
       "div1 div2 div2 div2"
-      "div5 div6 div7 div8"
-      "div9 div10 div11 div12";
+      "div5 div6 div7 div8";
   }
 
   .div1 {
@@ -166,6 +165,44 @@
 
   .div2 {
     grid-area: div2;
+    color: #242424;
+    overflow-y: scroll;
+  }
+  table
+  {
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+  thead{
+    border-bottom: #242424 2px solid;
+  }
+  tr{
+    border-bottom: #AAAAAA 1px solid;
+  }
+  th,td{
+    padding: 10px;
+  }
+
+  .urgent{
+    color: #FE223A;
+  }
+
+  .normal{
+    color: green;
+  }
+
+  th:nth-child(1){
+    width: 10%;
+  }
+
+  td:nth-child(3){
+    width: 20%;
+    color: #868686;
+  }
+
+  td:nth-child(6){
+    width: 5%;
   }
 
   .div3 {
@@ -267,6 +304,40 @@
 
 
   }
+
+  @media screen and (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "div1"
+        "div2"
+        "div5"
+        "div6"
+        "div7"
+        "div8";
+    }
+
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .wrapper div {
+      width: 100%;
+    }
+
+    .grid {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .logomiddle {
+      top: 10px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
 </style>
 
 <main class="main">
@@ -334,7 +405,78 @@
     </div>
     <p>Demandez des fournitures en ligne ou en magasin pour les personnes dans le besoin.</p>
     </div>
-    <div class="div2 case"></div>
+    <div class="div2 case">
+      <table>
+        <thead>
+          <tr>
+            <th>Priorité</th>
+            <th>Client</th>
+            <th>Adresse</th>
+            <th>Statut</th>
+            <th>Contenu</th>
+            <th>Quantité</th>
+          </tr>
+
+        </thead>
+        <tbody>
+          <tr>
+            <td class="normal">Normal</td>
+            <td>Brock olee</td>
+            <td>Adresse 1</td>
+            <td class="urgent">En cours</td>
+            <td>Serringues</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td class="urgent">Urgent</td>
+            <td>Théo tiste</td>
+            <td>Adresse 2</td>
+            <td class="urgent">En cours</td>
+            <td>Doliprane</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td class="urgent">Urgent</td>
+            <td>Mike Oxmall</td>
+            <td>Adresse 3</td>
+            <td class="urgent">En cours</td>
+            <td>Paracétamol</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td class="urgent">Urgent</td>
+            <td>théo </td>
+            <td>Adresse 4</td>
+            <td class="urgent">En cours</td>
+            <td>Compresse</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td class="urgent">Urgent</td>
+            <td>Chatgpt</td>
+            <td>Adresse 5</td>
+            <td class="urgent">En cours</td>
+            <td>Pansement</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td class="normal">Normal</td>
+            <td>Martin Lemasseur</td>
+            <td>Adresse 6</td>
+            <td class="normal">Terminé</td>
+            <td>fourniture</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td class="normal">Normal</td>
+            <td>Maxime tkt</td>
+            <td>Adresse 7</td>
+            <td class="normal">Terminé</td>
+            <td>Fourniture 7</td>
+            <td>12</td>
+          </tr>
+      </table>
+    </div>
     <div class="div5 case">
         <h1>Demandes principales</h1>
         <ul>
@@ -359,22 +501,7 @@
           <h1>Autre service</h1>
           <p>Service de soutien médical d'urgence pour les situations critiques.</p>
         </div>
-        <div class="div9 case">
-          <h1>Autre service</h1>
-          <p>Service de recherche et de mise en relation des personnes séparées lors de catastrophes.</p>
-        </div>
-        <div class="div10 case">
-          <h1>Autre service</h1>
-          <p>Service de secours en milieu naturel pour les situations d'urgence en montagne, en mer, etc.</p>
-        </div>
-        <div class="div11 case">
-          <h1>Autre service</h1>
-          <p>Service de formation aux gestes de premiers secours pour le grand public.</p>
-        </div>
-        <div class="div12 case">
-          <h1>Autre service</h1>
-          <p>Service de coordination des volontaires pour les interventions d'urgence.</p>
-        </div>
+
         </section>
 
 
