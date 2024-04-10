@@ -1,19 +1,381 @@
-<header class="d-flex flex-wrap align-items-center py-3 mb-4 border-bottom justify-content-center">
-  <ul class="nav mb-2 justify-content-center mb-md-0">
-    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/84/60/da/8460da29-1ee8-71ed-2481-a196df1abcb5/AppIcon-1x_U007emarketing-0-7-0-85-220-0.png/512x512bb.jpg" width="40" height="40">
-    <li class="mx-2"><a routerLink="/home" class="btn btn-outline-danger">Commande en cours</a></li>
-    <li class="mx-2"><a routerLink="/order" class="btn btn-outline-danger">Commander</a></li>
-  </ul>
-</header>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+  main {}
+
+  header {
+    background-color: #242424;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+
+  header .logo {
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+    border-radius: 50%;
+  }
+
+  header h1 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    float: right;
+
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  header button {
+    float: right;
+
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 20px;
+
+  }
+
+  .MainSection {
+    background-color: white;
+    padding-top: 0px;
+    margin-top: 0px;
+    border-bottom: 4px solid #242424;
+  }
+
+  .MainSection nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    float: right;
+  }
+
+  #wrapper1 {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    /*align the item on the  left*/
+    margin-left: 0;
+  }
+
+  #wrapper2 {
+    display: flex;
+    flex-direction: row;
+    /*align the item on the  right*/
+    margin-left: auto;
+  }
+
+  #wrapper1 a,
+  #wrapper2 a {
+    color: #868686;
+    text-decoration: none;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+
+  #wrapper1 a.active,
+  #wrapper2 a.active {
+    color: #242424;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .wrapper div {
+    width: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .wrapper h1 {
+    color: #242424;
+    font-size: 1.9em;
+    margin: 0;
+  }
+
+  .wrapper p {
+    color: #868686;
+    font-size: 1.2em;
+  }
 
 
-<router-outlet></router-outlet>
 
-<footer class=" text-center text-lg-start fixed-bottom pt-5">
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgb(255, 0, 0); color: white;">
-    © 2024 Copyright:
-    <a class="" href="https://www.croix-rouge.fr" style="color: white;">MINUTIS</a>
-  </div>
-  <!-- Copyright -->
-</footer>
+  .case {
+
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    background-color: white;
+    border: 3px solid #242424;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+  }
+
+  .grid {
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr 0.9fr 1.1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+      "div1 div2 div2 div2"
+      "div5 div6 div7 div8"
+      "div9 div10 div11 div12";
+  }
+
+  .div1 {
+    grid-area: div1;
+  }
+
+  .div2 {
+    grid-area: div2;
+  }
+
+  .div3 {
+    grid-area: div3;
+  }
+
+  .div4 {
+    grid-area: div4;
+  }
+
+  .div5 {
+    grid-area: div5;
+  }
+
+  .div6 {
+    grid-area: div6;
+  }
+
+  .div7 {
+    grid-area: div7;
+  }
+
+  .div8 {
+    grid-area: div8;
+  }
+
+  .div9 {
+    grid-area: div9;
+  }
+
+  .div10 {
+    grid-area: div10;
+  }
+
+  .div11 {
+    grid-area: div11;
+  }
+
+  .div12 {
+    grid-area: div12;
+  }
+
+  .case h1 {
+    color: #242424;
+    font-size: 1.9em;
+    margin: 0;
+  }
+
+  .case p {
+    color: #868686;
+    font-size: 1.2em;
+  }
+
+  .case input[type="radio"] {
+    /*color for radoi must be FE223A*/
+    background-color: #242424;
+
+    accent-color: #FE223A;
+  }
+
+  .case label {
+    color: #868686;
+    font-size: 1.2em;
+  }
+
+  .case ul {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: scroll;
+  }
+
+  .case li {
+    color: #868686;
+    border-bottom: 1px solid #868686;
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .case li span {
+    float: right;
+  }
+
+  .MainSection img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logomiddle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 30px;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 50%;
+    border: #242424 4px solid;
+    box-shadow: #242424 0px 0px 30px;
+
+
+  }
+</style>
+
+<main class="main">
+  <header>
+    <img src="../assets/Sans%20titre15.png" class="logo" alt="logo">
+    <h1>Livraisons</h1>
+    <nav>
+      <a routerLink="/home">Home</a>
+      <a routerLink="/livraisons">Livraisons</a>
+      <a routerLink="/livreurs">Livreurs</a>
+      <a routerLink="/clients">Clients</a>
+
+    </nav>
+    <button>login</button>
+    <button>logout</button>
+    <img src="./assets/Sans%20titre15.png" class="logomiddle">
+  </header>
+  <section class="MainSection">
+    <nav>
+        <div id="wrapper1">
+          <a href="#" class="active">Demandes</a>
+          <a href="#">Suivi</a>
+          <a href="#">Historique</a>
+        </div>
+        <div id="wrapper2">
+          <a href="#">Demandes en cours</a>
+          <a href="#">Demandes terminées</a>
+          <a href="#">Demandes annulées</a>
+        </div>
+    </nav>
+    <img src="../assets/hgeader.png" alt="logo">
+    <div class="wrapper">
+<div>
+  <h1>Demande de fournitures</h1>
+  <p>Demandez des fournitures en ligne ou en magasin pour les personnes dans le besoin.</p>
+</div>
+<div>
+  <h1>Suivi de livraison</h1>
+  <p>Suivez l'état de vos livraisons pour vous assurer qu'elles arrivent à bon port.</p>
+</div>
+<div>
+  <h1>Suivi des commandes</h1>
+  <p>Consultez l'historique de vos commandes pour un suivi efficace.</p>
+</div>
+<div>
+  <h1>Autres services</h1>
+  <p>Découvrez nos autres services de soutien aux personnes dans le besoin.</p>
+</div>
+<div>
+  <h1>Service de soutien psychologique</h1>
+  <p>Offrez un soutien psychologique aux personnes affectées par des situations de crise.</p>
+</div>
+</div>
+</section>
+<section class="grid">
+  <div class="div1 case">
+    <h1>Demande de fournitures</h1>
+    <div>
+      <input type="radio" name="supply" value="online">
+      <label for="online">Fournitures en ligne</label>
+    </div>
+    <div>
+      <input type="radio" name="supply" value="instore">
+      <label for="instore">Fournitures en magasin</label>
+    </div>
+    <p>Demandez des fournitures en ligne ou en magasin pour les personnes dans le besoin.</p>
+    </div>
+    <div class="div2 case"></div>
+    <div class="div5 case">
+        <h1>Demandes principales</h1>
+        <ul>
+          <li>Demande 1<span>12</span></li>
+          <li>Demande 2<span>12</span></li>
+          <li>Demande 3<span>12</span></li>
+          <li>Demande 4<span>12</span></li>
+          <li>Demande 5<span>12</span></li>
+          <li>Demande 6<span>12</span></li>
+          <li>Demande 7<span>12</span></li>
+        </ul>
+        </div>
+        <div class="div6 case">
+          <h1>Autre service</h1>
+          <p>Service dédié à l'accompagnement psychologique des personnes en situation de crise.</p>
+        </div>
+        <div class="div7 case">
+          <h1>Autre service</h1>
+          <p>Service de soutien alimentaire pour les personnes dans le besoin.</p>
+        </div>
+        <div class="div8 case">
+          <h1>Autre service</h1>
+          <p>Service de soutien médical d'urgence pour les situations critiques.</p>
+        </div>
+        <div class="div9 case">
+          <h1>Autre service</h1>
+          <p>Service de recherche et de mise en relation des personnes séparées lors de catastrophes.</p>
+        </div>
+        <div class="div10 case">
+          <h1>Autre service</h1>
+          <p>Service de secours en milieu naturel pour les situations d'urgence en montagne, en mer, etc.</p>
+        </div>
+        <div class="div11 case">
+          <h1>Autre service</h1>
+          <p>Service de formation aux gestes de premiers secours pour le grand public.</p>
+        </div>
+        <div class="div12 case">
+          <h1>Autre service</h1>
+          <p>Service de coordination des volontaires pour les interventions d'urgence.</p>
+        </div>
+        </section>
+
+
+</main>
